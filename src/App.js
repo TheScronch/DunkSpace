@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="shadowBox">DunkSpace</h1>
+        <h1 className="shadowBox">DunkSpace!</h1>
         <Cockpit
           postSubject={this.state.postSubject}
           postText={this.state.postText}
