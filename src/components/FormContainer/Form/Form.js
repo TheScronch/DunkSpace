@@ -1,23 +1,23 @@
 import React from 'react';
 
-const cockpit = (props) => {
-    return (
+const form = (props) => {
+    return(
         <div className="shadowBox halfWidth">
             <form 
-                className="postForm"
-                onSubmit={props.submit}>
-                Subject
+            className="postForm"
+            onSubmit={props.submit}>
                 <input 
                     type="text"
                     className="inputText"
+                    name="postSubject"
                     value={props.postSubject}
-                    onChange={props.changeSubject}/>
-                Body 
+                    onChange={props.change}/>
                 <input 
                     type="text"
                     className="inputText"
-                    value={props.postText}
-                    onChange={props.changePost}/>
+                    name="postBody"
+                    value={props.postBody}
+                    onChange={props.change}/>
                 <input 
                     type="submit"
                     value="Post" />
@@ -26,4 +26,4 @@ const cockpit = (props) => {
     )
 }
 
-export default cockpit;
+export default form;
