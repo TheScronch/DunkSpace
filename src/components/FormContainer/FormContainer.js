@@ -24,8 +24,6 @@ class FormContainer extends React.Component{
     const tValue = event.target.value;
     const tName = event.target.name;
 
-    console.log("INPUT");
-
     this.setState({
       [tName]: tValue
     });

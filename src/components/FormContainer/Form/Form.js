@@ -14,12 +14,13 @@ const form = (props) => {
                     onChange={props.change}/>
                 <input 
                     type="text"
-                    className="inputText"
+                    className="inputText inputBody"
                     name="postBody"
                     value={props.postBody}
                     onChange={props.change}/>
                 <input 
                     type="submit"
+                    className="submitButton"
                     value="Post" />
             </form>
         </div>

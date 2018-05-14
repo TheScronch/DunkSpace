@@ -1,12 +1,16 @@
 import React from 'react';
+import Header from './components/Header/Header';
 import FormContainer from './components/FormContainer/FormContainer';
 import PostFeed from './components/PostFeed/PostFeed';
 import './App.css';
 
 class App extends React.Component {
-  state = {
-    posts: []
-  };
+    constructor( props ) {
+      super( props )
+    this.state = {
+      posts: []
+    };
+  }
 
   addPost = (newPost) => {
     this.setState({
@@ -14,29 +18,12 @@ class App extends React.Component {
     });
   }
 
-  // handlePostSubmit = (event) => {
-  //   let newPostArr = this.state.posts;
-  //   console.log(newPostArr);
-  //   newPostArr.push( {subject: this.state.postSubject, text: this.state.postText} );
-
-  //   this.setState({ 
-  //     posts: newPostArr,
-  //     postSubject: "",
-  //     postText: ""}
-  //   );
-  //   console.log(this.state.posts);
-  //   this.state.posts.reverse();
-  //   event.preventDefault();
-  // }
-
   render() {
     return (
       <div className="App">
-        <h1 className="shadowBox">DunkSpace!</h1>
-        <FormContainer
-          addPost={this.addPost}/>
-        <PostFeed 
-          posts={this.state.posts}/>
+        <Header title={this.props.title}/>
+        <FormContainer addPost={this.addPost}/>
+        <PostFeed posts={this.state.posts}/>
       </div>
     );
   }
