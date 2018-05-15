@@ -3,7 +3,9 @@ import './Header.css';
 
 const header = (props) => {
     return(
-        <h1 className="header">{props.title}</h1>
+        <div className="header">
+            <span className="wrapper">{props.title}</span>
+        </div>
     )
 }
 

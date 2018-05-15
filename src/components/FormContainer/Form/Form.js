@@ -6,16 +6,18 @@ const form = (props) => {
             <form 
             className="postForm"
             onSubmit={props.submit}>
-                <input 
+                <textarea 
                     type="text"
-                    className="inputText"
+                    className="inputText inputSubject"
                     name="postSubject"
+                    placeholder="Subject" 
                     value={props.postSubject}
                     onChange={props.change}/>
-                <input 
+                <textarea 
                     type="text"
                     className="inputText inputBody"
                     name="postBody"
+                    placeholder="Write your status here..."
                     value={props.postBody}
                     onChange={props.change}/>
                 <input 
