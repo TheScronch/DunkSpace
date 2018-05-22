@@ -18,12 +18,20 @@ class App extends React.Component {
     });
   }
 
+  removePost = (postIndex) => {
+    console.log(postIndex);
+  }
+
   render() {
     return (
       <div className="App">
         <Header title={this.props.title}/>
-        <FormContainer addPost={this.addPost}/>
-        <PostFeed posts={this.state.posts}/>
+        <div className="contentContainer">
+          <FormContainer addPost={this.addPost}/>
+          <PostFeed 
+            posts={this.state.posts}
+            removePost={this.removePost}/>
+        </div>
       </div>
     );
   }

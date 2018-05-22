@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post/Post';
+import './PostFeed.css';
 
 class PostFeed extends React.Component {
 
@@ -10,19 +11,20 @@ class PostFeed extends React.Component {
         return <Post
           key={i}
           subject={post.subject}
-          body={post.body} />
+          body={post.body} 
+          removePost={() => this.props.removePost(i)}/>
     });
 
     return (
-      <div className='shadowBox halfWidth'>
-        {postArr.length === 0 ? (
-          <p>Type in the input field above, then press 'Post' to post your status.</p>
-        ) : (
-          <p>{postArr}</p>
-        )}
-      </div>
+      <React.Fragment>
+        {postArr.length !== 0 && 
+        <div className='shadowBox postFeed'>
+          {postArr}
+        </div>}
+      </React.Fragment>
     )
   }
 }
+
 
 export default PostFeed;

@@ -13,11 +13,16 @@ class FormContainer extends React.Component{
 
   onSubmit = (event) => {
     event.preventDefault();
-    this.props.addPost( { subject: this.state.postSubject, body: this.state.postBody } );
-    this.setState({
-      postSubject: "",
-      postBody: ""  
-    });
+    if( this.state.postBody !== "" )
+    {
+      this.props.addPost( { subject: this.state.postSubject, body: this.state.postBody } );
+      this.setState({
+        postSubject: "",
+        postBody: ""  
+      });
+    } else {
+      alert("Please enter a status.");
+    }
   }
 
   handleInputChange = (event) => {

@@ -1,0 +1,14 @@
+h3 {
+    margin-top: 0px; 
+}
+
+.postFeed {
+    padding: 0 18px!important;
+}
+
+.deleteButton {
+    position: relative;
+    float: right;
+    bottom: 14px;
+    left: 14px;
+}
